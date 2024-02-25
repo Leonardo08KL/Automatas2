@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lexer</title>
+        <link rel="icon" type="image/x-ico"
+            href="./vendor/img/logo.png" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link type="text/css" href="./vendor/css/codemirror.5.51.0.min.css"
+            rel="stylesheet" />
+        <link type="text/css" href="./vendor/css/monokai.5.51.0.min.css"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <div id="nav">
+                    <table id="analizar_lexico">
+                        <tr>
+                            <th>ID</th>
+                            <th>LEXEMA</th>
+                            <th>TOKEN</th>
+                            <th>LÍNEA</th>
+                            <th>COLUMNA</th>
+                        </tr>
+                    </table>
+                </div>
+                <div id="content">
+                    <div id="Dashboard">
+                        <div id="Input">
+                            <div
+                                style="width:721px;height: 30px;line-height:30px;text-indent:5px;background: #ddd;border: 1px solid #ccc;font-size:13px;color:#555;">
+                                <span>Simple Code Editor</span>
+                                <button id="ButtonCodearea">Syntax / ON</button>
+                                <!-- <button id="IgnoreWhiteSpace">IgnoreWhiteSpace /
+                                    ON</button>
+                                <button id="CompressLineFeed">CompressLineFeed /
+                                    ON</button> -->
+                            </div>
+                            <label>
+                                <textarea id="Textarea"
+                                    autofocus="autofocus"
+                                    placeholder="Sample code is being displayed, please wait..."></textarea>
+                            </label>
+                            <br>
+                        </div>
+                        <ul id="Preferences">
+                            <li
+                                class="lang-choose lang-choose-first lang-choose-c"><a
+                                    href="?lang=c">Lexico</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="Show">
+                <div id="TokenList">
+                </div>
+            </div>
+        </div>
+
+        <script src="./vendor/js/jquery.2.2.0.min.js"></script>
+        <script src="./vendor/js/codemirror.5.51.0.min.js"></script>
+        <script src="./vendor/js/clike.5.51.0.min.js"></script>
+        <script src="./vendor/js/sql.5.51.0.min.js"></script>
+        <script
+            src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        <!--Here is some common functions.-->
+        <script src="./functions.js"></script>
+        <!--Here is functions for using lexer.-->
+        <script src="./lexer.js"></script>
+        <!--Here is operations after reload.-->
+        <script src="./after_reload.js"></script>
+
+        <!--Here is the event binding.-->
+        <script src="binding.js"></script>
+        <!--Here is testing of lexer.-->
+        <script src="test_lexer.js"></script>
+
+        <!--Here is statistics of website.-->
+        <script src="statistics_website.js"></script>
+
+    </body>
+</html>
