@@ -63,8 +63,10 @@ function startParseInput() {
         // Agrega una fila a la tabla con los datos del token
         $('#analizar_lexico').append('<tr><td>' + idCont + '</td><td>' + content + '</td><td>' + type + '</td><td>' + lineaActual + '</td><td>' + columnaActual + '</td></tr>');
 
-        // Incrementar la columna según el tamaño de content
-        columnaActual += content.length;
+        // Incrementar la columna solo si el carácter actual no es un espacio en blanco
+        if (value.trim() !== '') {
+            columnaActual++;
+        }
         idCont++;
     });
 }
